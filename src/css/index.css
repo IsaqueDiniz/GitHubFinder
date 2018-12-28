@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: 0;
+	font-family: 'Ubuntu';
+}
+
+body {
+	background: #FFC5C5;
+}
+
+header {
+	width: 100vw;
+	max-height: 15vh;
+	background: #FF8080;
+	padding: 10px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header input {
+	transition: all ease-in-out;
+	padding: 2px 4px;
+	width: 250px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 2px 2px;
+	background: #FFC2C2;
+}
+
+header input:focus {
+	outline-color: blue;
+}
+
+header h1 {
+	color: #FFD044;
+	text-shadow: 1px 1px 1px currentColor;
+}
+
+#resultContainer,
+.user{
+	display: flex;
+}
+
+main#resultContainer {
+	background: blue;
+	width: 95vw;
+	margin: 0 auto;
+	padding: ;
+	display: flex;
+}
+
+div.profile {
+	background: red;
+}
+
+div.profile figure {
+	width: 30%;
+}
+
+div.profile figure > img { width: 100%; height: 100%; }
