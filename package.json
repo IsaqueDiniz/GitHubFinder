@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "browser-sync --w"
+    "server": "live-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
