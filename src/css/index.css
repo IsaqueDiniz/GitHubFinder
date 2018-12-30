@@ -45,6 +45,7 @@ header input {
 	background: var(--text-color-dark);
 	text-indent: 10px;
 	color: var(--bg-color-low);
+	font-size: 20px;
 }
 
 header input:focus {
@@ -54,10 +55,9 @@ header input:focus {
 
 main#resultContainer {
 	width: 100vw;
-	/*height: 90vh;*/
 	padding: 10px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 
 .user {
@@ -71,12 +71,15 @@ main#resultContainer {
 .profile {
 	width: 25%;
 	height: 85vh;
+	margin-right: 10px;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
 
-#userProfile { display: none; }
+div.profile {
+	visibility: hidden;
+}
 
 .profile figure{
 	width: 100%;
@@ -103,10 +106,11 @@ a.btnProfile {
 	background: var(--text-color-dark);
 	color: var(--bg-color-low);
 	padding: 6px 20px;
-	border: 1px solid currentColor;
+	border: 2px solid currentColor;
 	border-radius: 2px 2px;
 	transition: all ease-in-out 200ms;
 	margin-bottom: 30px;
+	font-weight: bold;
 }
 
 a.btnProfile:hover {
@@ -125,6 +129,11 @@ a.btnProfile:hover {
 	width: 100%;
 	margin: 5px auto;
 	padding: 10px;
+	transition: all linear 100ms;
+}
+
+.repo:hover {
+	transform: translateX(10px);
 }
 
 .col1,
@@ -135,6 +144,8 @@ a.btnProfile:hover {
 .col1 a {
 	text-decoration: underline;
 	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 .col1 span {

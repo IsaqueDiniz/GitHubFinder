@@ -33,7 +33,7 @@
 					<a class="btnProfile" href="${profile.html_url}" target="_blank">Ver Perfil</a>
 			`;
 			$userProfileDIV.innerHTML = userProfileTemplate;
-			$userProfileDIV.style.display = 'block';
+			$userProfileDIV.style.visibility = 'visible';
 		});			
 	}
 
@@ -45,11 +45,13 @@
 		reposData
 			.then(repos => {
 				repos.forEach(repo => {
+					const description = repo.description || "Não há descrição";
+
 					const current = `
 						<div class="repo user">
 							<div class="col1">
 								<a href="${repo.html_url}" target="_blank">${repo.name}</a><br>
-								<span class="desc">${repo.description}</span>
+								<span class="desc">${description}</span>
 							</div>
 							<div class="col2">
 								<b>Forks: <span>${repo.forks_count}</b>
@@ -68,7 +70,7 @@
 		document.getElementById('userProfile').innerHTML = '';
 		document.getElementById('userRepos').innerHTML = '';
 		document.getElementById('userProfile')
-			.style.display = 'none'
+			.style.visibility = 'hidden'
 	}	
 
 	$search.addEventListener('keyup', evt => {
