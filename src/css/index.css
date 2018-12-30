@@ -5,16 +5,30 @@
 	text-decoration: none;
 	border: 0;
 	font-family: 'Ubuntu';
+	list-style: none;
+}
+/*VAR*/
+* {
+	--text-color-dark : #574B51;
+	--text-color-medium: #A5A997;
+	--bg-color-low : #EBECE8;
+	--bg-color-medium: #BCCFCA;
+	--bg-color-dark: #74A3B2;
+}
+
+* {
+	color: var(--text-color-dark);
 }
 
 body {
-	background: #FFC5C5;
+	background: var(--bg-color-medium);
 }
 
 header {
 	width: 100vw;
+	height: 10vh;
 	max-height: 15vh;
-	background: #FF8080;
+	background: var(--bg-color-dark);
 	padding: 10px 100px;
 	display: flex;
 	justify-content: space-between;
@@ -27,38 +41,109 @@ header input {
 	width: 250px;
 	height: 30px;
 	font-size: 16px;
-	border-radius: 2px 2px;
-	background: #FFC2C2;
+	border-radius: 1px 1px;
+	background: var(--text-color-dark);
+	text-indent: 10px;
+	color: var(--bg-color-low);
 }
 
 header input:focus {
-	outline-color: blue;
+	outline-color: var(--text-color-dark);
 }
 
-header h1 {
-	color: #FFD044;
-	text-shadow: 1px 1px 1px currentColor;
-}
-
-#resultContainer,
-.user{
-	display: flex;
-}
 
 main#resultContainer {
-	background: blue;
-	width: 95vw;
-	margin: 0 auto;
-	padding: ;
+	width: 100vw;
+	/*height: 90vh;*/
+	padding: 10px;
 	display: flex;
+	justify-content: space-around;
 }
 
-div.profile {
-	background: red;
+.user {
+	display: flex;
+	background: var(--bg-color-low);
+	border-radius: 1px 1px;
+	border: 1px solid var(--bg-color-dark);
+	padding: 5px;
 }
 
-div.profile figure {
-	width: 30%;
+.profile {
+	width: 25%;
+	height: 85vh;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
-div.profile figure > img { width: 100%; height: 100%; }
+#userProfile { display: none; }
+
+.profile figure{
+	width: 100%;
+	align-self: flex-start;
+}
+
+.profile figure img {
+	width: 100%;
+}
+
+.profile ul {
+	width: 100%;
+	height: 40%;
+}
+
+.profile ul li {
+	margin: 5px auto;
+	padding: 10px;
+	border-bottom: 1px solid grey;
+}
+
+a.btnProfile {
+	display: inline-block;
+	background: var(--text-color-dark);
+	color: var(--bg-color-low);
+	padding: 6px 20px;
+	border: 1px solid currentColor;
+	border-radius: 2px 2px;
+	transition: all ease-in-out 200ms;
+	margin-bottom: 30px;
+}
+
+a.btnProfile:hover {
+	border-color: var(--text-color-dark);
+	color: var(--text-color-dark);
+	background: var(--bg-color-low);
+}
+
+.repos{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.repo{
+	width: 100%;
+	margin: 5px auto;
+	padding: 10px;
+}
+
+.col1,
+.col2 {
+	width: 50%;
+}
+
+.col1 a {
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+.col1 span {
+	margin-top: 15px;
+	margin-left: 20px;
+	display: block;
+}
+
+.col2 b {
+	display: block;
+	margin: 2.5px auto;
+}
