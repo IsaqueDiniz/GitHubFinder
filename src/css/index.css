@@ -35,6 +35,21 @@ header {
 	align-items: center;
 }
 
+header h1 {
+	color: var(--bg-color-low);
+	text-shadow: 1px 1px 1px currentColor;
+}
+
+header h1::after,
+header h1::before{
+	content: "";
+	display: block;
+	width: 150px;
+	height: 2.5px;
+	margin: 1px auto;
+	background: currentColor;
+}
+
 header input {
 	transition: all ease-in-out;
 	padding: 2px 4px;
@@ -126,6 +141,7 @@ a.btnProfile:hover {
 	align-items: center;
 }
 .repo{
+	display: flex;
 	width: 100%;
 	margin: 5px auto;
 	padding: 10px;

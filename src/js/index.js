@@ -48,7 +48,7 @@
 					const description = repo.description || "Não há descrição";
 
 					const current = `
-						<div class="repo user">
+						<div class="repo user" href="${repo.html_url}" target="_blank">
 							<div class="col1">
 								<a href="${repo.html_url}" target="_blank">${repo.name}</a><br>
 								<span class="desc">${description}</span>
