@@ -8,7 +8,7 @@
 	list-style: none;
 }
 /*VAR*/
-* {
+:root{
 	--text-color-dark : #574B51;
 	--text-color-medium: #A5A997;
 	--bg-color-low : #EBECE8;
@@ -22,6 +22,22 @@
 
 body {
 	background: var(--bg-color-medium);
+}
+
+div.warning {
+	position: absolute;
+	text-align: center;
+	z-index: -1;
+	top: 35vh;
+	max-width: 50vw;
+	padding: 20px;
+	left: 27vw;
+	font-size: 25px;
+	border-bottom: 1px solid currentColor;
+	transition: all linear 150ms;
+	font-weight: bold;
+	opacity: 0.5;
+	visibility: visible;
 }
 
 header {
@@ -145,7 +161,6 @@ a.btnProfile:hover {
 	width: 100%;
 	margin: 5px auto;
 	padding: 10px;
-	transition: all linear 100ms;
 }
 
 .repo:hover {

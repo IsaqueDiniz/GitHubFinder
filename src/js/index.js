@@ -5,7 +5,7 @@
 	const client_secret = '99eceeffc6cdf1c3740e43adec27de40703447bf';
 	const authKey = `client_id=${client_id}&client_secret=${client_secret}`;
 
-	async function getData(user, type){
+	async function getData(user, type) {
 		const profileResponse = await fetch(`${URL}/${user}?${authKey}`); 
 		const reposUser = await fetch(`${URL}/${user}/repos?per_page=15&sort=updated: desc&${authKey}`);
 
@@ -73,14 +73,25 @@
 			.style.visibility = 'hidden'
 	}	
 
+	function changeWarning (state) {
+		const $ele = document.getElementsByClassName('warning')[0];
+		if(state) {
+			$ele.style.display = 'none';
+		}else {
+			$ele.style.display = 'block';
+		}
+	}
+
 	$search.addEventListener('keyup', evt => {
 		const value = evt.target.value;
 		console.clear();
 		if(value.length > 0){
 				userProfileView(value);
 				userReposView(value);
+				changeWarning(true);
 		}else {
 			clearView();
+			changeWarning();
 		} 
 	})
 })();
